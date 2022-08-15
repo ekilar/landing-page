@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exotic-Cocktails</title>
+    <style>
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: linear-gradient(15deg, #0b4453 0%, #80d0c7 100%);
+        border-radius: 10px;
+      }
+      h1 {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 40px;
+        color: yellow;
+        border: 10px;
+        border-color: #8be044;
+        margin-top: 30px;
+      }
+      h2 {
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: yellow;
+        opacity: 0.8;
+        font-size: 25px;
+      }
+      hr {
+        color: #d0e9ce;
+        line-height: 10px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 55px;
+      }
+      p {
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 150px;
+        color: #d0e9ce;
+        margin: 16px, 100px;
+      }
+      li {
+        list-style-type: none;
+      }
+
+      ul {
+        text-align: center;
+        font-family: cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #d0e9ce;
+        padding-inline-start: 0px;
+      }
+      .credit {
+        text-align: center;
+        font-family: monospace;
+        font-size: 10px;
+        margin: 20px;
+        opacity: 0.5;
+      }
+      .cocktail-list {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        color: #d0e9ce;
+        opacity: 0.8;
+      }
+      a {
+        text-decoration-line: none;
+        color: #8be044;
+        opacity: 0.8;
+      }
+
+      a:hover {
+        color: yellow;
+        transition: all 200ms ease-in-out;
+      }
+      .mocktails {
+        text-align: center;
+        font-family: cursive, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: small;
+        padding: 10px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border-radius: 30px;
+        padding: 15px;
+        font-size: medium;
+        border: 30px;
+        background: #0b4453;
+        border-color: yellow;
+        color: yellow;
+        font-weight: bolder;
+        opacity: 0.6;
+        box-shadow: 3px 3px rgba(59, 61, 59, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: yellow;
+        color: #0b4453;
+        cursor: pointer;
+      }
+
+      body {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <h1>Cocktail Goddess</h1>
+      <hr />
+      <h2>Exotic Cocktails</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/037/619/original/cocktail.jpg?1655541019"
+        alt="Coctail"
+        width="300"
+      />
+      <p>
+        <strong>Exotic Cocktails</strong> are mixed drinks that have become
+        popular since the first quarter of the 20th century and all the bars
+        offer a list of selected exotic cocktails. However, people have been
+        drinking mixed drinks since alcoholic drinks came into existence. It is
+        claimed that the first recipe for a cocktail was lemon juice and
+        powdered mixers, appreciated by Emperor Commodus in the second century
+        AD.
+      </p>
+      <div class="cocktail-list">Exotic cocktails like:</div>
+      <ul>
+        <li>Exotic delicious dark</li>
+        <li>Caprese cocktail</li>
+        <li>Sunshine infusion cocktail</li>
+        <li>
+          Traditional Adonis cocktail
+          <span
+            >and
+            <a href="https://www.yummly.com/recipes/exotic-cocktail">
+              <em>more</em><br />
+            </a>
+            are on today's menu!</span
+          >
+        </li>
+      </ul>
+
+      <button>Order a Cocktail</button>
+      <div class="mocktails">
+        <a
+          href="https://www.bbcgoodfood.com/howto/guide/top-10-non-alcoholic-drinks"
+          >Mocktails here!</a
+        >
+      </div>
+      <div class="credit">This page was coded by Edel Quinn</div>
+    </div>
+    <script>
+      function orderNow() {
+        let firstName = prompt("What is your first Name?");
+        let drink = prompt("What exotic cocktail do you want?");
+        let age = prompt("How old are you?");
+        if (age >= 21) {
+          alert("Hi " + firstName + ", your " + drink + " will be ready soon!");
+        } else {
+          alert(
+            "Sorry " +
+              firstName +
+              ", you can't have a cocktail yet. Feel free to check-out our mocktail menu for a more appropriate option."
+          );
+        }
+      }
+      let orderButton = document.querySelector("button");
+      orderButton.addEventListener("click", orderNow);
+    </script>
+  </body>
+</html>
